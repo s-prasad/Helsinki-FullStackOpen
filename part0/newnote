@@ -1,0 +1,8 @@
+title New Note Sequence
+
+note left of Browser: save button on form is clicked.
+Browser->Server: User input sent as an HTTP POST request to /new_note
+note right of Server: Data from POST-request body is added to notes array
+Server->Browser: Response is HTTP 302 (URL redirect) to reload the notes page
+
+https://www.websequencediagrams.com/?lz=dGl0bGUgTmV3IE5vdGUgU2VxdWVuY2UKCm5vdGUgbGVmdCBvZiBCcm93c2VyOiBzYXZlIGJ1dHRvbiBvbiBmb3JtIGlzIGNsaWNrZWQuCgAiBy0-U2VydmVyOiBVc2VyIGlucHV0IHNlbnQgYXMgYW4gSFRUUCBQT1NUIHJlcXVlc3QgdG8gL25ld19ub3RlAHYGcmlnaAB4BQBDCERhdGEgZnJvbQA1BS0AMghib2R5IGlzIGFkZGVkIHRvIG5vdGVzIGFycmF5CgCBAQYtPgCBOAlSZXNwb25zZSBpcwCBAAYzMDIgKFVSTCByZWRpcmVjdCkgdG8gcmVsb2FkIHRoZQBIB3BhZ2UKCg&s=napkin
