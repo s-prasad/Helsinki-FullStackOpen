@@ -1,0 +1,24 @@
+title Sequence of events when user loads single page notes app
+
+browser->server: HTTP GET https://fullstack-exampleapp.herokuapp.com/spa
+server-->browser: HTML-code
+browser->server: HTTP GET https://fullstack-exampleapp.herokuapp.com/main.css
+server-->browser: main.css
+browser->server: HTTP GET https://fullstack-exampleapp.herokuapp.com/spa.js
+server-->browser: spa.js
+
+note over browser:
+browser starts executing js-code
+that requests JSON data from server 
+end note
+
+browser->server: HTTP GET https://fullstack-exampleapp.herokuapp.com/data.json
+server-->browser: [{ content: "HTML is easy", date: "2019-05-23" }, ...]
+
+note over browser:
+browser executes the event handler
+that renders notes to display
+end note
+
+
+https://www.websequencediagrams.com/?lz=dGl0bGUgU2VxdWVuY2Ugb2YgZXZlbnRzIHdoZW4gdXNlciBsb2FkcyBzaW5nbGUgcGFnZSBub3RlcyBhcHAKCmJyb3dzZXItPnNlcnZlcjogSFRUUCBHRVQgaHR0cHM6Ly9mdWxsc3RhY2stZXhhbXBsZWFwcC5oZXJva3VhcHAuY29tL3NwYQoAOgYtLT4ASwc6IEhUTUwtY29kZQAfRm1haW4uY3NzAFcTABIJAIEGSC5qAFMUABIHCm5vdGUgb3ZlciAAgWQIAII_CCBzdGFydHMgZXhlY3V0aW5nIGpzAIF9BnRoYXQgcmVxdWVzdHMgSlNPTiBkYXRhIGZyb20gAIJ2BiAKZW5kAIMXBQCCUEdkYXRhLmpzb24AgwoTW3sgY29udGVudDogIkhUTUwgaXMgZWFzeSIsIGRhdGU6ICIyMDE5LTA1LTIzIiB9LCAuLi5dAIFfHQCBbwZlcyB0aGUAhQAGIGhhbmRsZXIAgXYIbmRlcnMAhHcHdG8gZGlzcGxheQCBbgk&s=napkin
