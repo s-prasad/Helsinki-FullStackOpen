@@ -1,0 +1,13 @@
+title Sequence of events when user creates a new note in single page notes app
+
+browser->server: Send POST request to the address new_note_spa after clicking 'save'
+note right of server: POST contains the new note as JSON data 
+with header indicating content-type is application/json.
+end note
+server-->browser: Server responds with statuscode 201
+note left of browser: page is updated with "request payload" (i.e., the new note).
+
+end note
+
+https://www.websequencediagrams.com/?lz=dGl0bGUgU2VxdWVuY2Ugb2YgZXZlbnRzIHdoZW4gdXNlciBjcmVhdGVzIGEgbmV3IG5vdGUgaW4gc2luZ2xlIHBhZ2UADwVzIGFwcAoKYnJvd3Nlci0-c2VydmVyOiBTZW5kIFBPU1QgcmVxdWVzdCB0byB0aGUgYWRkcmVzcyBuZXdfbm90ZV9zcGEgYWZ0ZXIgY2xpY2tpbmcgJ3NhdmUnCgBvBXJpZ2h0IG9mIABSCABQBWNvbnRhaW5zAE4FAIEXCWFzIEpTT04gZGF0YSAKd2l0aCBoZWFkZXIgaW5kaWNhdGluZwA2BWVudC10eXBlIGkAgTsFbAAXBW9uL2pzb24uCmVuZACBawUKAIFHBi0tPgCBWAc6IFMAgVoFIHJlc3BvbmRzIABfBXN0YXR1c2NvZGUgMjAxAIExBmxlZgCBMQUAMQkAgi0FaXMgdXBkYXRlZAA0BiIAghUIcGF5bG9hZCIgKGkuZS4sAIFKDSkuCgCBCgk&s=napkin
+
